@@ -1,0 +1,135 @@
+$primary-bg: #E1E5EE;
+$primary-color: #2A324B;
+$hover-color: #58699D;
+$active-bg: #fff;
+$padding-large: 3rem;
+$font-main: 'Montserrat', sans-serif;
+
+body {
+    font-family: $font-main;
+    background-color: $primary-bg;
+    padding: 10rem;
+}
+
+.kategori-liste {
+    list-style: none;
+    display: flex;
+    justify-content: space-evenly;
+    gap: 1rem;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+
+    li {
+        flex: 1;
+    }
+
+    a {
+        display: block;
+        text-align: center;
+        padding: 20px;
+        background-color: $primary-color;
+        color: #fff;
+        text-decoration: none;
+        width: 100%;
+        white-space: nowrap;
+        font-size: 16px;
+        font-weight: bold;
+        box-sizing: border-box;
+
+        &.active {
+            background-color: $active-bg;
+            color: $primary-color;
+        }
+
+        &:hover {
+            background-color: $active-bg;
+            color: $hover-color;
+        }
+    }
+}
+
+#ressurs-liste {
+    gap: 20px;
+    padding: 20px;
+    background-color: #fff;
+    min-height: 310px;
+}
+
+.resource-tab {
+    padding: $padding-large;
+}
+
+a {
+    color: $hover-color;
+}
+
+h1 {
+    font-size: 25px;
+}
+
+@media (max-width: 1050px) {
+    .kategori-liste{
+        a{
+            font-size: 12px;
+        }
+    }
+    h1{
+        font-size: 18px;
+    }
+}
+
+@media (max-width: 800px){
+
+    #ressurs-liste{
+        min-height: 200px;
+    }
+
+    .resource-tab{
+        padding: 1.5rem;
+        h1{
+            font-size: 15px;
+        }
+        ul li a{
+            font-size: 10px;
+        }
+    }
+
+    .kategori-liste{
+        gap: 5px;
+
+        a{
+            font-size: 8px;
+            padding: 10px;
+        }
+    }
+
+
+}
+
+@media (max-width: 600px){
+
+    #ressurs-liste{
+        min-height: 160px;
+    }
+
+    .resource-tab{
+        padding: 1rem;
+
+        h1{
+            font-size: 13px;
+        }
+        ul li a{
+            font-size: 8px;
+
+        }
+    }
+    .kategori-liste{
+        a{
+            font-size: 6px;
+            padding: 5px
+        }
+    }
+}
+
+
